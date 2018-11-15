@@ -1,0 +1,40 @@
+<!--Team-->
+<div class="section scrollspy" id="team">
+    <div class="container">
+        <h2 class="header text_b">Notre équipe </h2>
+        <div class="row">
+
+            {% assign ourTeam = site.team | sort: 'order' %}
+            {% for people in ourTeam %}
+            <div class="col s12 m3">
+                <div class="card card-avatar">
+                    <div class="waves-effect waves-block waves-light">
+                        <img class="activator" src="{{ people.picture }}">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">{{ people.name }}<br/>
+                            <small><em><a class="red-text text-darken-1" href="#">{{ people.poste }}</a></em></small></span>
+                        <p>
+                            {% if people.facebook %}
+                            <a class="text-lighten-2" href="{{ people.facebook }}">
+                                <i class="fa fa-facebook-square"></i>
+                            </a>
+                            {% endif %}
+                            {% if people.linkedin %}
+                            <a class="text-lighten-2" href="{{ people.linkedin }}">
+                                <i class="fa fa-linkedin-square"></i>
+                            </a>
+                            {% endif %}
+                            {% if people.instagram %}
+                            <a class="text-lighten-2" href="{{ people.instagram }}">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                            {% endif %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

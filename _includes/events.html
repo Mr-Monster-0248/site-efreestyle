@@ -1,0 +1,28 @@
+<!--Work-->
+<div class="section scrollspy" id="Evenement">
+    <div class="container">
+        <h2 class="header text_b">Evenements</h2>
+        <div class="row">
+
+            {% assign event_array = site.events | sort: 'date' | reverse %}
+            {% for event in event_array %}
+            <div class="col s12 m4 l4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="{{ event.illustration }}">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">{{ event.name }} <i class="mdi-navigation-more-vert right"></i></span>
+                        <p><a href="#">Voir les photos</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">{{ event.name }} <i class="mdi-navigation-close right"></i></span>
+                        <p>{{ event.comment}}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
