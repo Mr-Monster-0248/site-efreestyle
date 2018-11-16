@@ -5,7 +5,7 @@
         <div class="row">
 
             {% assign event_array = site.events | sort: 'date' | reverse %}
-            {% for event in event_array %}
+            {% for event in event_array  limit: 3 %}
             <div class="col s12 m4 l4">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
@@ -23,6 +23,10 @@
             </div>
             {% endfor %}
 
+        </div>
+
+        <div class="center">
+            <p class=""><a href="#">Tout les evenements</a></p>
         </div>
     </div>
 </div>
