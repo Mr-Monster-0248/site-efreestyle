@@ -24,6 +24,7 @@ cache:
     - bundler
     - jekyll
 
+# htmlproofer ./_site --http-status-ignore "999"
 # Optional: disable email notifications about the outcome of your builds
 notifications:
   email: false
