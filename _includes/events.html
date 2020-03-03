@@ -5,9 +5,9 @@
         <div class="row">
 
             {% assign event_array = site.events | sort: 'date' | reverse %}
-            {% for event in event_array  limit: 3 %}
+            {% for event in event_array %}
             <div class="col s12 m4 l4">
-                <div class="card">
+                <div class="card" style="height:500px;">
                     <div class="card-image waves-effect waves-block waves-light">
                         <img class="activator" src="{{ event.illustration }}">
                     </div>
