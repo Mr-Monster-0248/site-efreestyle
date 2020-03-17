@@ -1,11 +1,12 @@
+name: Publish website
+
 on: 
   release:
     types: [ created ]
     
-name: Publish website
 jobs:
   build:
-
+    name: Building website
     runs-on: ubuntu-latest
 
     steps:
@@ -18,13 +19,13 @@ jobs:
 
   publish:
     needs: build
-
+    name: Publishing to Github page
     runs-on: ubuntu-latest
 
     steps:
     - name: Sending build folder to Git repo
       if: success()
-    - uses: crazy-max/ghaction-github-pages@v1
+      uses: crazy-max/ghaction-github-pages@v1
       with:
           repo: https://github.com/Efreestyle/efreestyle.github.io
           target_branch: master
