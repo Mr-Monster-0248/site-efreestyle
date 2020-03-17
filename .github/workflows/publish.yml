@@ -1,7 +1,8 @@
-on:
-  release
+name: Publish website
 
-name: Export website
+on: 
+  release:
+    types: [ created ]
 
 jobs:
   build:
