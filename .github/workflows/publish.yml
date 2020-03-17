@@ -22,11 +22,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: crazy-max/ghaction-github-pages@v1
-      - name: Sending build folder to Git repo
-        with:
-            repo: https://github.com/Efreestyle/efreestyle.github.io
-            target_branch: master
-            build_dir: _site
-        env:
-          GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
+    - uses: crazy-max/ghaction-github-pages@v1
+    - name: Sending build folder to Git repo
+      with:
+          repo: https://github.com/Efreestyle/efreestyle.github.io
+          target_branch: master
+          build_dir: _site
+      env:
+        GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
