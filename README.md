@@ -1,5 +1,6 @@
 # Site Web Efreestyle
 ![build icon](https://github.com/Mr-Monster-0248/site-efreestyle/workflows/Jekyll%20build%20site%20CI/badge.svg)
+![Publish website](https://github.com/Mr-Monster-0248/site-efreestyle/workflows/Publish%20website/badge.svg)
 
 This is the devellopent repository for the efreestyle webiste
 
