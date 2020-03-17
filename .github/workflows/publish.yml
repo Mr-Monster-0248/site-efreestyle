@@ -28,7 +28,7 @@ jobs:
       if: success()
       uses: crazy-max/ghaction-github-pages@v1
       with:
-          repo: https://github.com/Efreestyle/efreestyle.github.io
+          repo: Efreestyle/efreestyle.github.io
           target_branch: master
           build_dir: _site
       env:
