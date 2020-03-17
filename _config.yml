@@ -19,7 +19,7 @@ email: contact@efreestyle.fr
 description: >- # this means to ignore newlines until "baseurl:"
   Association de danse de l'EFREI Paris
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "efreestyle.fr" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://efreestyle.fr" # the base hostname & protocol for your site, e.g. http://example.com
 
 twitter_username: EfreestyleEfrei
 facebook_url:  facebook.com/EfreestyleDanceCrew
