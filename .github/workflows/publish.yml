@@ -1,7 +1,7 @@
-name: Export website
-
 on:
   release
+
+name: Export website
 
 jobs:
   build:
