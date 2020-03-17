@@ -5,17 +5,6 @@ on:
     types: [ created ]
     
 jobs:
-  build:
-    name: Building website
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Build the site in the jekyll/builder container
-      run: |
-        docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
 
   publish:
     needs: build
@@ -24,6 +13,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+
+    - name: Build the site in the jekyll/builder container
+      run: |
+        docker run \
+        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+        jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
+
     - name: Sending build folder to Git repo
       if: success()
       uses: crazy-max/ghaction-github-pages@v1
