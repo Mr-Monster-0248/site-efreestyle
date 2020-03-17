@@ -24,7 +24,7 @@ jobs:
     steps:
       - continue-on-error: false
       - name: Sending build folder to Git repo
-        uses: crazy-max/ghaction-github-pages@v1
+      - uses: crazy-max/ghaction-github-pages@v1
         with:
             repo: https://github.com/Efreestyle/efreestyle.github.io
             target_branch: master
