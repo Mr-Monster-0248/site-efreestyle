@@ -1,4 +1,4 @@
-name: Publish website
+name: Export website
 
 on:
   release
